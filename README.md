@@ -20,49 +20,48 @@ Following are the formulations and assumptions we made -
 
     -  So through calculas we can show the derivative of tanh as -
 
-$$ {g}'(z) = 1 - {tanh(z)}^2 = 1 - {g(z)}^2 \tag{2} $$
+![](https://latex.codecogs.com/png.latex?%7Bg%7D%27%28z%29%20%3D%201%20-%20%7Btanh%28z%29%7D%5E2%20%3D%201%20-%20%7Bg%28z%29%7D%5E2)
 
 
 * The **cost function** can be calculated from the following formula - 
 
-$$ -\frac{1}{m} \sum\limits_{i = 1}^{m}(y^{(i)}\log\left(a^{(i)}\right) + (1-y^{(i)})\log\left(1- a^{(i)}\right)) \tag{3} $$
+![](https://latex.codecogs.com/png.latex?-%5Cfrac%7B1%7D%7Bm%7D%20%5Csum%5Climits_%7Bi%20%3D%201%7D%5E%7Bm%7D%28y%5E%7B%28i%29%7D%5Clog%5Cleft%28a%5E%7B%28i%29%7D%5Cright%29%20+%20%281-y%5E%7B%28i%29%7D%29%5Clog%5Cleft%281-%20a%5E%7B%28i%29%7D%5Cright%29%29)
 
 * So the formulas for **forward propagation** will looks like considering X as input and Y as output -  
 
 
     - Hidden Layer Input ->
-$$  Z^{(1)} = W^{(1)}X + b^{(1)} \tag{4} $$
+![](https://latex.codecogs.com/png.latex?Z%5E%7B%281%29%7D%20%3D%20W%5E%7B%281%29%7DX%20+%20b%5E%7B%281%29%7D)
 
     - Hidden Layer OutPut through Activation(tanh) function ->
-$$  A^{(1)} = g^{(1)}(Z^{(1)}) = tanh(Z^{(1)}) \tag{5} $$
+![](https://latex.codecogs.com/png.latex?A%5E%7B%281%29%7D%20%3D%20g%5E%7B%281%29%7D%28Z%5E%7B%281%29%7D%29%20%3D%20tanh%28Z%5E%7B%281%29%7D%29)
 
     - Final Layer Input ->
-$$  Z^{(2)} = W^{(2)}A^{(1)} + b^{(2)} \tag{6} $$
+![](https://latex.codecogs.com/png.latex?Z%5E%7B%282%29%7D%20%3D%20W%5E%7B%282%29%7DA%5E%7B%281%29%7D%20+%20b%5E%7B%282%29%7D)
 
     - Final Layer Output through Sigmoid ->
-$$  Y = A^{(2)} = g^{(2)}(Z^{(2)}) = sigmoid(Z^{(2)}) \tag{7} $$
+![](https://latex.codecogs.com/png.latex?Y%20%3D%20A%5E%7B%282%29%7D%20%3D%20g%5E%7B%282%29%7D%28Z%5E%7B%282%29%7D%29%20%3D%20sigmoid%28Z%5E%7B%282%29%7D%29)
 
 
 * So the formulas for **back propagation** will looks like considering X as input and Y as output -
 
 
     - differential For Final Layer -> 
-$$  dZ^{(2)} = A^{(2)} - Y \tag{8} $$
+![](https://latex.codecogs.com/png.latex?dZ%5E%7B%282%29%7D%20%3D%20A%5E%7B%282%29%7D%20-%20Y)
 
     - weight differentials for Final Layer -> 
-$$  dW^{(2)} = dZ^{(2)} (A^{(1)})^{T} \tag{9} $$
+![](https://latex.codecogs.com/png.latex?dW%5E%7B%282%29%7D%20%3D%20dZ%5E%7B%282%29%7D%20%28A%5E%7B%281%29%7D%29%5E%7BT%7D)
 
     - bias differentials for final layer -> 
-$$ db^{(2)} = dZ^{(2)} \tag{10} $$
+![](https://latex.codecogs.com/png.latex?db%5E%7B%282%29%7D%20%3D%20dZ%5E%7B%282%29%7D)
 
     - differentials for hidden layer output -> 
-$$ dZ^{(1)} = (W^{(2)})^{(T)}dZ^{(2)} * {g^{(1)}}'(Z^{(1)}) \tag{11}  $$ 
-
+![](https://latex.codecogs.com/png.latex?dZ%5E%7B%281%29%7D%20%3D%20%28W%5E%7B%282%29%7D%29%5E%7B%28T%29%7DdZ%5E%7B%282%29%7D%20*%20%7Bg%5E%7B%281%29%7D%7D%27%28Z%5E%7B%281%29%7D%29)
     - so from the formula (2) we can write 
-$$ dZ^{(1)} = (W^{(2)})^{(T)}dZ^{(2)} * (1 - (g^{(1)}(Z))^{2}) = (W^{(2)})^{(T)}dZ^{(2)} * (1 - (A^{(1)})^{2}) \tag{12} $$
+![](https://latex.codecogs.com/png.latex?dZ%5E%7B%281%29%7D%20%3D%20%28W%5E%7B%282%29%7D%29%5E%7B%28T%29%7DdZ%5E%7B%282%29%7D%20*%20%281%20-%20%28g%5E%7B%281%29%7D%28Z%29%29%5E%7B2%7D%29%20%3D%20%28W%5E%7B%282%29%7D%29%5E%7B%28T%29%7DdZ%5E%7B%282%29%7D%20*%20%281%20-%20%28A%5E%7B%281%29%7D%29%5E%7B2%7D%29)
 
     - weight differentials for Hidden Layer ->
-$$ dW^{(1)} = dZ^{(1)} (X^{(1)})^{T} \tag{13} $$
+![](https://latex.codecogs.com/png.latex?dW%5E%7B%281%29%7D%20%3D%20dZ%5E%7B%281%29%7D%20%28X%5E%7B%281%29%7D%29%5E%7BT%7D)
 
     - bias differentials for Hidden layer -> 
-$$ db^{(1)} = dZ^{(1)} \tag{14} $$
+![](https://latex.codecogs.com/png.download?db%5E%7B%281%29%7D%20%3D%20dZ%5E%7B%281%29%7D)
