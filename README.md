@@ -25,7 +25,7 @@ Following are the formulations and assumptions we made -
 
 * The **cost function** can be calculated from the following formula - 
 
-![](https://latex.codecogs.com/png.latex?-%5Cfrac%7B1%7D%7Bm%7D%20%5Csum%5Climits_%7Bi%20%3D%201%7D%5E%7Bm%7D%28y%5E%7B%28i%29%7D%5Clog%5Cleft%28a%5E%7B%28i%29%7D%5Cright%29%20+%20%281-y%5E%7B%28i%29%7D%29%5Clog%5Cleft%281-%20a%5E%7B%28i%29%7D%5Cright%29%29)
+     ![](https://latex.codecogs.com/png.latex?-%5Cfrac%7B1%7D%7Bm%7D%20%5Csum%5Climits_%7Bi%20%3D%201%7D%5E%7Bm%7D%28y%5E%7B%28i%29%7D%5Clog%5Cleft%28a%5E%7B%28i%29%7D%5Cright%29%20+%20%281-y%5E%7B%28i%29%7D%29%5Clog%5Cleft%281-%20a%5E%7B%28i%29%7D%5Cright%29%29)
 
 * So the formulas for **forward propagation** will looks like considering X as input and Y as output -  
 
@@ -64,6 +64,5 @@ Following are the formulations and assumptions we made -
 ![](https://latex.codecogs.com/png.latex?dW%5E%7B%281%29%7D%20%3D%20dZ%5E%7B%281%29%7D%20%28X%5E%7B%281%29%7D%29%5E%7BT%7D)
 
     - bias differentials for Hidden layer ->
-    ![](https://latex.codecogs.com/png.latex?db%5E%7B%281%29%7D%20%3D%20dZ%5E%7B%281%29%7D)
-    --------------------(1)
+   ![](https://latex.codecogs.com/png.latex?db%5E%7B%281%29%7D%20%3D%20dZ%5E%7B%281%29%7D)
 
