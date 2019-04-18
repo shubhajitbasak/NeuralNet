@@ -16,7 +16,7 @@ Following are the formulations and assumptions we made -
 
 * We are using **tanh** as the activation function for the hidden layer -
 
-          ![](https://latex.codecogs.com/gif.latex?g%28z%29%20%3D%20tanh%28z%29%20%3D%20%5Cfrac%7Be%5Ez%20-%20e%5E%7B-z%7D%7D%7Be%5Ez%20+%20e%5E%7B-z%7D%7D)
+     ![](https://latex.codecogs.com/gif.latex?g%28z%29%20%3D%20tanh%28z%29%20%3D%20%5Cfrac%7Be%5Ez%20-%20e%5E%7B-z%7D%7D%7Be%5Ez%20+%20e%5E%7B-z%7D%7D)
 
   -  So through calculas we can show the derivative of tanh as -
   
