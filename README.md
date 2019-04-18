@@ -16,10 +16,11 @@ Following are the formulations and assumptions we made -
 
 * We are using **tanh** as the activation function for the hidden layer -
 
-![](https://latex.codecogs.com/gif.latex?g%28z%29%20%3D%20tanh%28z%29%20%3D%20%5Cfrac%7Be%5Ez%20-%20e%5E%7B-z%7D%7D%7Be%5Ez%20+%20e%5E%7B-z%7D%7D)  \tag{1}
+![](https://latex.codecogs.com/gif.latex?g%28z%29%20%3D%20tanh%28z%29%20%3D%20%5Cfrac%7Be%5Ez%20-%20e%5E%7B-z%7D%7D%7Be%5Ez%20+%20e%5E%7B-z%7D%7D)
 
   -  So through calculas we can show the derivative of tanh as -
-![](https://latex.codecogs.com/png.latex?%7Bg%7D%27%28z%29%20%3D%201%20-%20%7Btanh%28z%29%7D%5E2%20%3D%201%20-%20%7Bg%28z%29%7D%5E2)
+  
+  ![](https://latex.codecogs.com/png.latex?%7Bg%7D%27%28z%29%20%3D%201%20-%20%7Btanh%28z%29%7D%5E2%20%3D%201%20-%20%7Bg%28z%29%7D%5E2)
 
 
 * The **cost function** can be calculated from the following formula - 
