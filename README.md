@@ -70,6 +70,8 @@ Following are the formulations and assumptions we made -
 ### Part II 
 #### Test with a simple dataset which is separable through a non-linear boundary
 
+![](https://github.com/shubhajitbasak/NeuralNet/blob/master/Images/Circle.PNG)
+
 ### Part III
 #### Test with More Complex Dataset 
 
