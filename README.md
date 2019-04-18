@@ -66,3 +66,32 @@ Following are the formulations and assumptions we made -
     - bias differentials for Hidden layer ->
    ![](https://latex.codecogs.com/png.latex?db%5E%7B%281%29%7D%20%3D%20dZ%5E%7B%281%29%7D)
 
+
+### Part II 
+#### Test with a simple dataset which is separable through a non-linear boundary
+
+### Part III
+#### Test with More Complex Dataset 
+
+* I will now test it with a more complex dataset 
+* CIFAR-10 dataset of 10 images: https://www.cs.toronto.edu/~kriz/cifar.html
+* Each image is of size 32x32, with 3 colour channels (Red, Green, Blue): 
+To make it suitable for your shallow neural net, use just 1 of the colour channels or average all three to convert the images to greyscale; then convert it to vector of 1024 floats
+
+### Part IV
+#### Add Deep Neural Feature
+
+#### Enhancement 
+
+* I have changed the activation function from tanh to ReLU as ReLU is computationally less expensive and works much faster than tanh
+* I have also added an additional hidden layer to the network to make the model as deep neural network
+* While initializing the weight I have normalised them with respect to the previous layer weight
+* Using ReLU and the normalization during weight initialization will reduce the chance of getting into the vanishing or exploding gradient issue
+* Implementation of forward and back propagation will remain same from part I, only the tanh activation function is replaced by ReLU 
+* As I have used RELU following is the implementation of RELU
+    ![](https://latex.codecogs.com/png.latex?ReLU%28x%29%3Dmax%280%2Cx%29)
+* Implementation of derivative of ReLU Function 
+![](https://latex.codecogs.com/png.latex?%7Bf%7D%27%28ReLU%28x%29%29%20%3D%201%5C%3B%20if%5C%3B%20x%3E0%5C%3B%20else%5C%3B%200)
+
+
+* So during back propagation I have passed the activation output when x is greater than zero
