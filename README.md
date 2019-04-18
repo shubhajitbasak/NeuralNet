@@ -64,6 +64,5 @@ Following are the formulations and assumptions we made -
 ![](https://latex.codecogs.com/png.latex?dW%5E%7B%281%29%7D%20%3D%20dZ%5E%7B%281%29%7D%20%28X%5E%7B%281%29%7D%29%5E%7BT%7D)
 
     - bias differentials for Hidden layer -> 
-![](https://latex.codecogs.com/png.download?db%5E%7B%281%29%7D%20%3D%20dZ%5E%7B%281%29%7D)
+![](https://latex.codecogs.com/png.download?db%5E%7B%281%29%7D%20%3D%20dZ%5E%7B%281%29%7D)                                  (1)
 
-$$|\vec{A}|=\sqrt{A_x^2 + A_y^2 + A_z^2}.$$(2)
