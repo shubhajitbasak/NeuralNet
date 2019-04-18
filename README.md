@@ -66,5 +66,4 @@ Following are the formulations and assumptions we made -
     - bias differentials for Hidden layer -> 
 ![](https://latex.codecogs.com/png.download?db%5E%7B%281%29%7D%20%3D%20dZ%5E%7B%281%29%7D)
 
-
-$ g(z) = tanh(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}} \tag{1} $
+$$|\vec{A}|=\sqrt{A_x^2 + A_y^2 + A_z^2}.$$(2)
